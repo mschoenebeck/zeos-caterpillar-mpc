@@ -1,0 +1,48 @@
+[package]
+name = "zeos-caterpillar-mpc"
+version = "0.1.0"
+authors = ["Matthias Schönebeck <matthias.schoenebeck@gmail.com>"]
+
+[[bin]]
+name = "new"
+required-features = ["verification"]
+
+[[bin]]
+name = "verify"
+required-features = ["verification"]
+
+[[bin]]
+name = "beacon"
+required-features = ["beacon"]
+
+[[bin]]
+name = "compute"
+
+[[bin]]
+name = "verify_transform"
+
+[[bin]]
+name = "split_params"
+
+[dependencies]
+pairing = "0.23"
+rand = "0.8"
+rand_core = "0.6"
+blake2-rfc = "0.2"
+
+[dependencies.zeos-caterpillar]
+version = "0.1"
+git = "https://github.com/mschoenebeck/zeos-caterpillar"
+optional = true
+
+[dependencies.phase2]
+version = "0.3"
+git = "https://github.com/mschoenebeck/phase2"
+
+[dependencies.hex-literal]
+version = "0.4"
+optional = true
+
+[features]
+verification = ["zeos-caterpillar"]
+beacon = ["hex-literal"]
