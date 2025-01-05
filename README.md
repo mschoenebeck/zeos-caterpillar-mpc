@@ -18,13 +18,13 @@ Follow the steps below in order to conduct the MPC (aka 'trusted ceremony'). Fir
 
 3) Once all participants have contributed the `params` file is finalized by calling: `cargo run --release --bin beacon --features="beacon"` This step is very similar to the `compute` step except that the entropy which is added here originates from a future but deterministic event. A great source for the `beacon` entropy is a Bitcoin block hash of a block which is going to be mined in the future (and thus fully deterministic but unknown to all participants at the time of the MPC). Anyone can execute this final step to finalize the `params` file.
 
-4) Finally, the MPC is completed and the `params` need to be split into the separate circuit parameter files. In order to do this, call: `cargo run --release --bin split_params` which will take the final `params` file and split it into `x` files where `x` is the number of arithmetic circuits (in case of `zeos-caterpillar` this number is 4).
+4) Finally, the MPC is completed and the `params` need to be split into the separate circuit parameter files. In order to do this, call: `cargo run --release --bin split_params --features="verification"` which will take the final `params` file and split it into `x` files where `x` is the number of arithmetic circuits (in case of `zeos-caterpillar` this number is 4). In addition to that it will generate `x` more files in whih you can find the corresponding verifying keys as little-endian encoded hex strings for easy upload to the protocol's smart contract.
 
 Eventually four files are being generated. Once for each arithmetic circuit of the protocol:
-- `mint.params`
-- `spend_output.params`
-- `spend.params`
-- `output.params`
+- `mint.params` (and `mint.vk.hex`)
+- `spend_output.params` (and `spend_output.vk.hex`)
+- `spend.params` (and `spend.vk.hex`)
+- `output.params` (and `output.vk.hex`)
 
 ## How to participate?
 
