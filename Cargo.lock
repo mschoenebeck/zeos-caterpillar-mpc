@@ -984,7 +984,7 @@ dependencies = [
 [[package]]
 name = "zeos-caterpillar"
 version = "0.1.0"
-source = "git+https://github.com/mschoenebeck/zeos-caterpillar#f49cf9d8d9423ccf5b606b8969645cb98d445392"
+source = "git+https://github.com/mschoenebeck/zeos-caterpillar?tag=v1.0.0-32#36349283f08b34f8a1b8d059effd367ab7302f63"
 dependencies = [
  "aes",
  "arrayref",

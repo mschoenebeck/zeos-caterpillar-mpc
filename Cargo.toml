@@ -35,6 +35,8 @@ hex = "0.4.3"
 [dependencies.zeos-caterpillar]
 version = "0.1"
 git = "https://github.com/mschoenebeck/zeos-caterpillar"
+tag = "v1.0.0-32"
+#tag = "v1.0.0-20"
 optional = true
 
 [dependencies.phase2]
