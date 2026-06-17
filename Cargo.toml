@@ -24,6 +24,7 @@ name = "verify_transform"
 
 [[bin]]
 name = "split_params"
+required-features = ["verification"]
 
 [dependencies]
 pairing = "0.23"
@@ -33,14 +34,13 @@ blake2-rfc = "0.2"
 hex = "0.4.3"
 
 [dependencies.zeos-caterpillar]
-version = "0.1"
+version = "0.2"
 git = "https://github.com/mschoenebeck/zeos-caterpillar"
-tag = "v1.0.0-32"
-#tag = "v1.0.0-20"
+tag = "v1.1.0-12"
 optional = true
 
 [dependencies.phase2]
-version = "0.3"
+version = "0.4"
 git = "https://github.com/mschoenebeck/phase2"
 
 [dependencies.hex-literal]
