@@ -732,7 +732,7 @@ dependencies = [
 [[package]]
 name = "phase2"
 version = "0.4.0"
-source = "git+https://github.com/mschoenebeck/phase2#f9563920ccc4b2e07a61b6e92b04438f5c08d01f"
+source = "git+https://github.com/mschoenebeck/phase2?tag=v0.4.0-blstrs#f9563920ccc4b2e07a61b6e92b04438f5c08d01f"
 dependencies = [
  "bellman",
  "blake2-rfc",
